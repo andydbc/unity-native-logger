@@ -19,15 +19,15 @@ void NativeLogger::Log(NativeLogger::Level level, const char* msg)
 
 void NativeLogger::LogInfo(const char* msg)
 {
-	Logger(0, msg);
+	Logger((int)Level::Info, msg);
 }
 
 void NativeLogger::LogWarn(const char* msg)
 {
-	Logger(1, msg);
+	Logger((int)Level::Warning, msg);
 }
 
 void NativeLogger::LogError(const char* msg)
 {
-	Logger(2, msg);
+	Logger((int)Level::Error, msg);
 }
